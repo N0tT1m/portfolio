@@ -1,12 +1,15 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "Nathan Moritz - Software Developer Portfolio",
+  "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
-  "dependencies": {},
+  "keywords": ["portfolio", "software-developer"],
+  "author": "Nathan Moritz",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.5.3"
   },

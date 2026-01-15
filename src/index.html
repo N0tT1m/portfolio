@@ -3,388 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathan Moritz - Software Developer specializing in Rust, Python, Go, C#, and cloud technologies. View my portfolio of projects and get in touch.">
+  <meta name="keywords" content="Nathan Moritz, Software Developer, IT Professional, Rust, Python, Go, C#, Azure, Docker, Portfolio">
+  <meta name="author" content="Nathan Moritz">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nathan Moritz - Software Developer">
+  <meta property="og:description" content="Software Developer specializing in Rust, Python, Go, C#, and cloud technologies.">
+  <meta property="og:url" content="https://nathanmoritz.dev">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nathan Moritz - Software Developer">
+  <meta name="twitter:description" content="Software Developer specializing in Rust, Python, Go, C#, and cloud technologies.">
+
   <link rel="icon" type="image/webp" href="duocore-development.webp">
+  <link rel="canonical" href="https://nathanmoritz.dev">
+  <link rel="stylesheet" href="styles.css">
+
   <title>Nathan Moritz - Software Developer</title>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-  <style>
-    :root {
-      --primary-color: #60a5fa;
-      --text-color: #e5e7eb;
-      --bg-color: #111827;
-      --bg-color-light: #1f2937;
-      --card-bg: #374151;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    }
-
-    body {
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: var(--bg-color);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    header {
-      background: var(--bg-color);
-      padding: 2rem 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      position: relative;
-      width: 60px;
-      height: 60px;
-      border: 2px solid var(--primary-color);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--card-bg);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      padding: 8px;
-    }
-
-    .logo:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-
-    .logo::before {
-      content: "esc";
-      position: absolute;
-      top: -8px;
-      left: 5px;
-      font-size: 0.7rem;
-      color: var(--primary-color);
-      background: var(--bg-color);
-      padding: 0 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .logo-svg {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-color);
-    }
-
-    .hero {
-      padding: 6rem 0;
-      text-align: center;
-      background: var(--bg-color);
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-color);
-      margin-bottom: 2rem;
-    }
-
-    .skills {
-      padding: 4rem 0;
-      background: var(--bg-color);
-    }
-
-    .skills h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .skill-card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .projects {
-      padding: 4rem 0;
-      background: var(--bg-color);
-    }
-
-    .projects h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      background: var(--bg-color-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .project-content {
-      padding: 1.5rem;
-    }
-
-    .project-content h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .project-links {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .project-links a {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    .contact {
-      padding: 4rem 0;
-      background: var(--bg-color);
-      text-align: center;
-    }
-
-    .contact h2 {
-      margin-bottom: 2rem;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .contact-links a {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    footer {
-      background: var(--bg-color);
-      color: var(--text-color);
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .skills-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    .hosted-projects {
-      padding: 4rem 0;
-      background: var(--bg-color);
-    }
-
-    .hosted-projects h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--text-color);
-    }
-
-    .hosted-projects .skill-card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .hosted-projects .skill-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .hosted-projects .skill-card h3 {
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
-
-    .hosted-projects .skill-card p {
-      color: var(--text-color);
-      margin-bottom: 0.5rem;
-    }
-  </style>
 </head>
 <body>
 <header>
   <nav class="container">
     <div class="logo">
-      <img src="duocore-development.webp" alt="Duocore Development" class="logo-svg">
+      <img src="duocore-development.webp" alt="Duocore Development Logo" class="logo-svg">
     </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#hosted">Hosted</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<section class="hero" id="about">
-  <div class="container">
-    <h1>Nathan Moritz</h1>
-    <div id="typed-strings">
-      <p>Software Developer</p>
-      <p>IT Professional</p>
-      <p>Problem Solver</p>
+<main>
+  <section class="hero" id="about">
+    <div class="container">
+      <h1>Nathan Moritz</h1>
+      <div id="typed-strings">
+        <p>Software Developer</p>
+        <p>IT Professional</p>
+        <p>Problem Solver</p>
+      </div>
+      <span id="typed"></span>
+      <p>Passionate about creating efficient and scalable solutions</p>
     </div>
-    <span id="typed"></span>
-    <p>Passionate about creating efficient and scalable solutions</p>
-  </div>
-</section>
+  </section>
 
-<section class="skills" id="skills">
-  <div class="container">
-    <h2>Skills & Expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Languages</h3>
-        <p>Python, Go, C#, Dart/Flutter, Angular</p>
-      </div>
-      <div class="skill-card">
-        <h3>DevOps</h3>
-        <p>Docker, Terraform, Github Actions</p>
-      </div>
-      <div class="skill-card">
-        <h3>Cloud</h3>
-        <p>Azure</p>
-      </div>
-      <div class="skill-card">
-        <h3>Certifications</h3>
-        <p>A+, Network+, SSCP</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- <section class="hosted-projects" id="hosted">
-  <div class="container">
-    <h2>Hosted Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">
-          <h3>Media Scout</h3>
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <p>Python, Go, C#, Dart/Flutter, Angular</p>
         </div>
-        <div class="project-content">
-          <p>Find new shows or movies using Media Scout</p>
-          <p>Technologies: Rust, React, Javscript</p>
-          <div class="project-links">
-            <a href="https://wonderful-sea-0d9f9b60f.2.azurestaticapps.net/" target="_blank">Live Site</a>
-          </div>
+        <div class="skill-card">
+          <h3>DevOps</h3>
+          <p>Docker, Terraform, Github Actions</p>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image">
-          <h3>Demo Wise</h3>
+        <div class="skill-card">
+          <h3>Cloud</h3>
+          <p>Azure</p>
         </div>
-        <div class="project-content">
-          <p>Analyze Counter-Strike 2 demos</p>
-          <p>Technologies: C#, MSSQL, Javascript</p>
-          <div class="project-links">
-            <a href="https://demo.duocore.space/" target="_blank">Live Site</a>
-          </div>
+        <div class="skill-card">
+          <h3>Certifications</h3>
+          <p>A+, Network+, SSCP</p>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
+  </section>
 
-<section class="projects" id="projects">
-  <div class="container">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid" id="projects-container">
-      <!-- Projects will be dynamically populated -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid" id="projects-container">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Get In Touch</h2>
-    <div class="contact-links">
-      <a href="mailto:nathan.moritz@protonmail.com">Email</a>
-      <a href="https://github.com/N0tT1m" target="_blank">GitHub</a>
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-links">
+        <a href="mailto:nathan.moritz@protonmail.com">Email</a>
+        <a href="https://github.com/N0tT1m" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
   <div class="container">
@@ -392,67 +105,6 @@
   </div>
 </footer>
 
-<script>
-  // Pure JavaScript version - no TypeScript
-  const projects = [
-    {
-      title: "Media Scout",
-      description: "A website for finding new shows and movies.",
-      technologies: ["Rust", "React", "Javascript"],
-      githubUrl: "https://github.com/N0tT1m/Media-Scout"
-    },
-    {
-      title: "Demo Lens",
-      description: "A Counter Strike 2 Analysis Web App",
-      technologies: ["C#", "MS SQL", "Docker"],
-      githubUrl: "https://github.com/N0tT1m/demo-lens"
-    },
-    {
-      title: "Cine Sync V2",
-      description: "Cine Sync V2 is a Collection of Ai Models",
-      technologies: ["PyTorch", "Ai", "Python"],
-      githubUrl: "https://github.com/N0tT1m/cine-sync-v2"
-    },
-    {
-      title: "Chameleon",
-      description: "Chameleon Gives You Control Over Your Network Interface",
-      technologies: ["Rust", "Clap", "Pnet", "Reqwest", "tokio"],
-      githubUrl: "https://github.com/N0tT1m/chameleon",
-    }
-  ];
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const typed = new Typed('#typed', {
-      stringsElement: '#typed-strings',
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true
-    });
-
-    const projectsContainer = document.getElementById('projects-container');
-    if (projectsContainer) {
-      projects.forEach(project => {
-        const projectElement = document.createElement('div');
-        projectElement.className = 'project-card';
-
-        projectElement.innerHTML = `
-                        <div class="project-image">
-                            <h3>${project.title}</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>${project.description}</p>
-                            <p>Technologies: ${project.technologies.join(', ')}</p>
-                            <div class="project-links">
-                                ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank">GitHub</a>` : ''}
-                                ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank">Live Demo</a>` : ''}
-                            </div>
-                        </div>
-                    `;
-
-        projectsContainer.appendChild(projectElement);
-      });
-    }
-  });
-</script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
