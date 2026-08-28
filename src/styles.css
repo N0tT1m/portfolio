@@ -137,6 +137,58 @@ nav {
   transform: translateY(-5px);
 }
 
+.achievements {
+  padding: 4rem 0;
+  background: var(--bg-color-light);
+}
+
+.achievements h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-badge {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.achievement-issuer {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.achievement-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
 .projects {
   padding: 4rem 0;
   background: var(--bg-color);
