@@ -4,6 +4,7 @@ interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  status?: string;
 }
 
 declare const Typed: new (element: string, options: {
@@ -33,6 +34,7 @@ function createProjectCard(project: Project): HTMLDivElement {
   projectElement.innerHTML = `
     <div class="project-image">
       <h3>${project.title}</h3>
+      ${project.status ? `<span class="project-status">${project.status}</span>` : ''}
     </div>
     <div class="project-content">
       <p>${project.description}</p>

@@ -1,5 +1,24 @@
 [
   {
+    "title": "Forza Horizon Tuner",
+    "description": "A desktop tuning app that turns a car, its upgrades, and a racing discipline into a ready-to-enter Forza tune. Computes real spring rates from sprung corner weight and target ride frequency, listens to the game's live UDP telemetry feed, and runs a discipline-aware coach that flags handling issues from real driving and offers one-click fixes.",
+    "technologies": ["TypeScript", "React", "Electron", "Vite", "Python", "Polars", "scikit-learn", "Plotly Dash"],
+    "status": "In development"
+  },
+  {
+    "title": "Franky",
+    "description": "A hardware health monitor for a four-machine fleet: Rust collectors read sensors on each box, a Rust hub stores readings in PostgreSQL, and a Python agent turns findings into plain-language answers about what is failing, since when, and what it means. Built as a spec-first project with the design, decisions, and test plan written down before the code.",
+    "technologies": ["Rust", "Tokio", "PostgreSQL", "Python", "Docker", "Azure AI Foundry"],
+    "githubUrl": "https://github.com/N0tT1m/franky",
+    "status": "Early development"
+  },
+  {
+    "title": "Quest Log",
+    "description": "A self-hosted learning tracker for coding practice and AI/ML curricula. Structured paths break down into modules, tasks, and day-by-day schedules with markdown task content, per-task notes, progress statistics, and a GitHub-style activity heatmap. Ships with seeded curricula and a Docker setup for production and hot-reload development.",
+    "technologies": ["SvelteKit", "Svelte 5", "TypeScript", "SQLite", "Drizzle ORM", "Tailwind CSS", "Docker"],
+    "githubUrl": "https://github.com/N0tT1m/quest-log"
+  },
+  {
     "title": "Media Scout",
     "description": "A full-stack media discovery platform that aggregates trending movies and TV shows from TMDB, providing personalized recommendations based on genre preferences and rating thresholds. Features smart caching, duplicate prevention, and streaming platform availability.",
     "technologies": ["Rust", "Actix-Web", "React", "Vite", "Tailwind CSS", "TMDB API"],
