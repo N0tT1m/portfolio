@@ -3,6 +3,7 @@
     "title": "Forza Horizon Tuner",
     "description": "A desktop tuning app that turns a car, its upgrades, and a racing discipline into a ready-to-enter Forza tune. Computes real spring rates from sprung corner weight and target ride frequency, listens to the game's live UDP telemetry feed, and runs a discipline-aware coach that flags handling issues from real driving and offers one-click fixes.",
     "technologies": ["TypeScript", "React", "Electron", "Vite", "Python", "Polars", "scikit-learn", "Plotly Dash"],
+    "githubUrl": "https://github.com/N0tT1m/forza-horizon-tuner",
     "status": "In development"
   },
   {
