@@ -20,6 +20,18 @@
     "githubUrl": "https://github.com/N0tT1m/quest-log"
   },
   {
+    "title": "Pokedex",
+    "description": "A Flutter companion app for playing Pokemon games, covering all 1025 species across every generation. Bundles a full Pokedex with species data, thirteen calculators and lookup tools (damage, catch rate, IV/EV, weakness analysis, speed tiers, breeding), reference databases for types, moves, abilities and items, plus team saving and a Nuzlocke run tracker. Ships for Android, iOS, macOS, Windows, Linux and web.",
+    "technologies": ["Dart", "Flutter", "Hive", "REST APIs"],
+    "githubUrl": "https://github.com/N0tT1m/pokedex"
+  },
+  {
+    "title": "Pokemon API",
+    "description": "A read-only, PokeAPI-compatible HTTP API in Go serving 75 endpoints of Pokemon data, plus game-specific data PokeAPI does not carry — raid rotations, trainer teams, mass outbreaks, version exclusives, in-game trades, TM locations and Z-moves. One codebase targets either PostgreSQL or SQLite via build tags, and the binary serves its own OpenAPI 3.1 spec, reference docs and request playground. Backs the Pokedex app.",
+    "technologies": ["Go", "chi", "PostgreSQL", "SQLite", "Docker", "OpenAPI", "Azure Container Apps"],
+    "githubUrl": "https://github.com/N0tT1m/pokemon-api"
+  },
+  {
     "title": "Media Scout",
     "description": "A full-stack media discovery platform that aggregates trending movies and TV shows from TMDB, providing personalized recommendations based on genre preferences and rating thresholds. Features smart caching, duplicate prevention, and streaming platform availability.",
     "technologies": ["Rust", "Actix-Web", "React", "Vite", "Tailwind CSS", "TMDB API"],
