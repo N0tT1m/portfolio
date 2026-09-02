@@ -1,5 +1,12 @@
 [
   {
+    "title": "Gielinomics",
+    "description": "A time-series service that retains Old School RuneScape market history the official APIs discard — upstream serves only recent windows, so the fine-grained record only exists if you keep it. A .NET ingest worker polls the wiki's real-time prices on a schedule, detects and backfills gaps, and alarms on staleness; a minimal API queries the accumulated history and an alerting layer evaluates margin rules with the real Grand Exchange tax schedule applied. The HTTP client ships as a standalone NuGet package.",
+    "technologies": ["C#", ".NET", "ASP.NET Core", "PostgreSQL", "Dapper", "Npgsql", "Docker", "React", "TypeScript"],
+    "githubUrl": "https://github.com/N0tT1m/gielinomics",
+    "status": "In development"
+  },
+  {
     "title": "Forza Horizon Tuner",
     "description": "A desktop tuning app that turns a car, its upgrades, and a racing discipline into a ready-to-enter Forza tune. Computes real spring rates from sprung corner weight and target ride frequency, listens to the game's live UDP telemetry feed, and runs a discipline-aware coach that flags handling issues from real driving and offers one-click fixes.",
     "technologies": ["TypeScript", "React", "Electron", "Vite", "Python", "Polars", "scikit-learn", "Plotly Dash"],
