@@ -154,19 +154,6 @@
     "githubUrl": "https://github.com/N0tT1m/Media-Scout"
   },
   {
-    "title": "Demo Lens",
-    "description": "An enterprise-grade Counter-Strike 2 demo analysis platform with 99% event coverage. Features interactive heatmaps, 27 analytics services, AI-powered insights, and a microservices architecture spanning .NET, Python, Go, and Node.js.",
-    "technologies": [
-      "C#",
-      ".NET 9",
-      "SQL Server",
-      "Docker",
-      "Python",
-      "Go",
-      "Leaflet.js"
-    ]
-  },
-  {
     "title": "Cine Sync V2",
     "description": "An AI-powered recommendation engine featuring 8 deep learning models including BERT4Rec, GraphSAGE, and T5. Processes 150M+ ratings across streaming platforms with real-time personalization, a web admin dashboard, and Discord bot integration.",
     "technologies": [
@@ -178,16 +165,5 @@
       "Docker"
     ],
     "githubUrl": "https://github.com/N0tT1m/cine-sync-v2"
-  },
-  {
-    "title": "Chameleon",
-    "description": "A cross-platform CLI tool for network identity management. Supports MAC address spoofing with vendor prefixes, VPN integration (NordVPN, ExpressVPN, WireGuard), SOCKS proxy routing, application-specific rules with scheduling, and geolocation-based spoofing.",
-    "technologies": [
-      "Rust",
-      "Tokio",
-      "Clap",
-      "Pnet",
-      "Ratatui"
-    ]
   }
 ]
