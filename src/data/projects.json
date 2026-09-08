@@ -55,20 +55,6 @@
     "status": "In development"
   },
   {
-    "title": "Crucible",
-    "description": "A red-team toolkit for language models: a Python core that runs prompt-injection, RAG-poisoning, agent tool-use and data-extraction probes against a target and judges the responses, with results stored in SQLite and reported as diffs, HTML or audit output. Go binaries provide the network side — poisoned pages, an MCP proxy, a bus tap — and a Go dashboard tracks refusal-rate drift over time.",
-    "technologies": [
-      "Python",
-      "Go",
-      "SQLite",
-      "Textual",
-      "vLLM",
-      "Ollama",
-      "Docker"
-    ],
-    "githubUrl": "https://github.com/N0tT1m/crucible"
-  },
-  {
     "title": "Gielinomics",
     "description": "A time-series service that retains Old School RuneScape market history the official APIs discard — upstream serves only recent windows, so the fine-grained record only exists if you keep it. A .NET ingest worker polls the wiki's real-time prices on a schedule, detects and backfills gaps, and alarms on staleness; a minimal API queries the accumulated history and an alerting layer evaluates margin rules with the real Grand Exchange tax schedule applied. The HTTP client ships as a standalone NuGet package.",
     "technologies": [
