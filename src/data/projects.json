@@ -1,65 +1,207 @@
 [
   {
+    "title": "Hydra V3",
+    "description": "A distributed inference platform that runs a language model too large for any one GPU by splitting its layers across machines. A Go coordinator assigns layers from the model's own config rather than a fixed constant, refuses a placement that cannot fit instead of failing later, and streams hidden states between nodes over ZeroMQ; Python workers hold their shard and execute it. Exposes an OpenAI-compatible API with tool calling and a bounded KV-cache reuse across agent turns.",
+    "technologies": [
+      "Go",
+      "Python",
+      "PyTorch",
+      "ZeroMQ",
+      "CUDA",
+      "Apple MPS"
+    ],
+    "githubUrl": "https://github.com/N0tT1m/hydra-v3"
+  },
+  {
+    "title": "Real-Estayer",
+    "description": "A travel-planning service that searches and tracks listings, assembles trips, and enriches destinations with weather, transit, visa, event and flight data. Go web app over MongoDB with strict handler/service/repository layering and versioned migrations that run at boot; a separate Rust headless-Chrome scraper feeds the same database. Optional integrations fail soft, so the app boots and serves with nothing but a session secret and a database URL.",
+    "technologies": [
+      "Go",
+      "Rust",
+      "MongoDB",
+      "Docker",
+      "html/template",
+      "Alpine.js"
+    ],
+    "githubUrl": "https://github.com/N0tT1m/real-estayer-v4"
+  },
+  {
+    "title": "Den-Den-Mushi",
+    "description": "Centralized structured logging for services written in different languages. Drop-in loggers for Go, Python and .NET emit one identical JSON envelope, with contract tests on each side asserting they agree; Vector collects from containers, files or HTTP into ClickHouse, and Grafana and a small Go viewer read the same table. The emit side is storage-agnostic, so swapping the database never touches an application.",
+    "technologies": [
+      "Go",
+      "Python",
+      "C#",
+      "Vector",
+      "ClickHouse",
+      "Grafana",
+      "Docker"
+    ],
+    "githubUrl": "https://github.com/N0tT1m/den-den-mushi"
+  },
+  {
+    "title": "ChefGenius",
+    "description": "A recipe platform built around retrieval rather than generation alone: a FastAPI backend pairs a fine-tuned FLAN-T5 model with vector search over a recipe corpus, an ingredient substitution engine that respects dietary restrictions, and nutrition analysis. Ships with the training pipeline as well as the service, including the memory work needed to fit a 3B-parameter model onto a single 32GB card.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "Transformers",
+      "Weaviate",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "githubUrl": "https://github.com/N0tT1m/chef-genius-ai",
+    "status": "In development"
+  },
+  {
+    "title": "Crucible",
+    "description": "A red-team toolkit for language models: a Python core that runs prompt-injection, RAG-poisoning, agent tool-use and data-extraction probes against a target and judges the responses, with results stored in SQLite and reported as diffs, HTML or audit output. Go binaries provide the network side — poisoned pages, an MCP proxy, a bus tap — and a Go dashboard tracks refusal-rate drift over time.",
+    "technologies": [
+      "Python",
+      "Go",
+      "SQLite",
+      "Textual",
+      "vLLM",
+      "Ollama",
+      "Docker"
+    ],
+    "githubUrl": "https://github.com/N0tT1m/crucible"
+  },
+  {
     "title": "Gielinomics",
     "description": "A time-series service that retains Old School RuneScape market history the official APIs discard — upstream serves only recent windows, so the fine-grained record only exists if you keep it. A .NET ingest worker polls the wiki's real-time prices on a schedule, detects and backfills gaps, and alarms on staleness; a minimal API queries the accumulated history and an alerting layer evaluates margin rules with the real Grand Exchange tax schedule applied. The HTTP client ships as a standalone NuGet package.",
-    "technologies": ["C#", ".NET", "ASP.NET Core", "PostgreSQL", "Dapper", "Npgsql", "Docker", "React", "TypeScript"],
+    "technologies": [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "PostgreSQL",
+      "Dapper",
+      "Npgsql",
+      "Docker",
+      "React",
+      "TypeScript"
+    ],
     "githubUrl": "https://github.com/N0tT1m/gielinomics",
     "status": "In development"
   },
   {
     "title": "Forza Horizon Tuner",
     "description": "A desktop tuning app that turns a car, its upgrades, and a racing discipline into a ready-to-enter Forza tune. Computes real spring rates from sprung corner weight and target ride frequency, listens to the game's live UDP telemetry feed, and runs a discipline-aware coach that flags handling issues from real driving and offers one-click fixes.",
-    "technologies": ["TypeScript", "React", "Electron", "Vite", "Python", "Polars", "scikit-learn", "Plotly Dash"],
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Electron",
+      "Vite",
+      "Python",
+      "Polars",
+      "scikit-learn",
+      "Plotly Dash"
+    ],
     "githubUrl": "https://github.com/N0tT1m/forza-horizon-tuner",
     "status": "In development"
   },
   {
     "title": "Franky",
     "description": "A hardware health monitor for a four-machine fleet: Rust collectors read sensors on each box, a Rust hub stores readings in PostgreSQL, and a Python agent turns findings into plain-language answers about what is failing, since when, and what it means. Built as a spec-first project with the design, decisions, and test plan written down before the code.",
-    "technologies": ["Rust", "Tokio", "PostgreSQL", "Python", "Docker", "Azure AI Foundry"],
+    "technologies": [
+      "Rust",
+      "Tokio",
+      "PostgreSQL",
+      "Python",
+      "Docker",
+      "Azure AI Foundry"
+    ],
     "githubUrl": "https://github.com/N0tT1m/franky",
     "status": "Early development"
   },
   {
     "title": "Quest Log",
     "description": "A self-hosted learning tracker for coding practice and AI/ML curricula. Structured paths break down into modules, tasks, and day-by-day schedules with markdown task content, per-task notes, progress statistics, and a GitHub-style activity heatmap. Ships with seeded curricula and a Docker setup for production and hot-reload development.",
-    "technologies": ["SvelteKit", "Svelte 5", "TypeScript", "SQLite", "Drizzle ORM", "Tailwind CSS", "Docker"],
+    "technologies": [
+      "SvelteKit",
+      "Svelte 5",
+      "TypeScript",
+      "SQLite",
+      "Drizzle ORM",
+      "Tailwind CSS",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/N0tT1m/quest-log"
   },
   {
     "title": "Pokedex",
     "description": "A Flutter companion app for playing Pokemon games, covering all 1025 species across every generation. Bundles a full Pokedex with species data, thirteen calculators and lookup tools (damage, catch rate, IV/EV, weakness analysis, speed tiers, breeding), reference databases for types, moves, abilities and items, plus team saving and a Nuzlocke run tracker. Ships for Android, iOS, macOS, Windows, Linux and web.",
-    "technologies": ["Dart", "Flutter", "Hive", "REST APIs"],
+    "technologies": [
+      "Dart",
+      "Flutter",
+      "Hive",
+      "REST APIs"
+    ],
     "githubUrl": "https://github.com/N0tT1m/pokedex"
   },
   {
     "title": "Pokemon API",
     "description": "A read-only, PokeAPI-compatible HTTP API in Go serving 75 endpoints of Pokemon data, plus game-specific data PokeAPI does not carry — raid rotations, trainer teams, mass outbreaks, version exclusives, in-game trades, TM locations and Z-moves. One codebase targets either PostgreSQL or SQLite via build tags, and the binary serves its own OpenAPI 3.1 spec, reference docs and request playground. Backs the Pokedex app.",
-    "technologies": ["Go", "chi", "PostgreSQL", "SQLite", "Docker", "OpenAPI", "Azure Container Apps"],
+    "technologies": [
+      "Go",
+      "chi",
+      "PostgreSQL",
+      "SQLite",
+      "Docker",
+      "OpenAPI",
+      "Azure Container Apps"
+    ],
     "githubUrl": "https://github.com/N0tT1m/pokemon-api"
   },
   {
     "title": "Media Scout",
     "description": "A full-stack media discovery platform that aggregates trending movies and TV shows from TMDB, providing personalized recommendations based on genre preferences and rating thresholds. Features smart caching, duplicate prevention, and streaming platform availability.",
-    "technologies": ["Rust", "Actix-Web", "React", "Vite", "Tailwind CSS", "TMDB API"],
+    "technologies": [
+      "Rust",
+      "Actix-Web",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "TMDB API"
+    ],
     "githubUrl": "https://github.com/N0tT1m/Media-Scout"
   },
   {
     "title": "Demo Lens",
     "description": "An enterprise-grade Counter-Strike 2 demo analysis platform with 99% event coverage. Features interactive heatmaps, 27 analytics services, AI-powered insights, and a microservices architecture spanning .NET, Python, Go, and Node.js.",
-    "technologies": ["C#", ".NET 9", "SQL Server", "Docker", "Python", "Go", "Leaflet.js"],
-    "githubUrl": "https://github.com/N0tT1m/demo-lens"
+    "technologies": [
+      "C#",
+      ".NET 9",
+      "SQL Server",
+      "Docker",
+      "Python",
+      "Go",
+      "Leaflet.js"
+    ]
   },
   {
     "title": "Cine Sync V2",
     "description": "An AI-powered recommendation engine featuring 8 deep learning models including BERT4Rec, GraphSAGE, and T5. Processes 150M+ ratings across streaming platforms with real-time personalization, a web admin dashboard, and Discord bot integration.",
-    "technologies": ["Python", "PyTorch", "Transformers", "Flask", "PostgreSQL", "Docker"],
+    "technologies": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Flask",
+      "PostgreSQL",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/N0tT1m/cine-sync-v2"
   },
   {
     "title": "Chameleon",
     "description": "A cross-platform CLI tool for network identity management. Supports MAC address spoofing with vendor prefixes, VPN integration (NordVPN, ExpressVPN, WireGuard), SOCKS proxy routing, application-specific rules with scheduling, and geolocation-based spoofing.",
-    "technologies": ["Rust", "Tokio", "Clap", "Pnet", "Ratatui"],
-    "githubUrl": "https://github.com/N0tT1m/chameleon"
+    "technologies": [
+      "Rust",
+      "Tokio",
+      "Clap",
+      "Pnet",
+      "Ratatui"
+    ]
   }
 ]
